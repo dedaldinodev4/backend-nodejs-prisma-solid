@@ -7,12 +7,26 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+//* Categories Model *//
+model Category {
+  id          String    @id @default(uuid())
+  name        String    @unique
+  description String
+  created_at  DateTime  @default(now())
+  products    Product[]
+
+  @@map("_categories")
+}
+
+//* Products Model *//
 model Product {
   id         String   @id @default(uuid())
   name       String
   bar_code   String   @unique
   price      Decimal
   created_at DateTime @default(now())
+  category   Category @relation(fields: [categoryId], references: [id])
+  categoryId String
 
-  @@map("products")
+  @@map("_products")
 }
