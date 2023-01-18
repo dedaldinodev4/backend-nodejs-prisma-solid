@@ -9,24 +9,33 @@ datasource db {
 
 //* Categories Model *//
 model Category {
-  id          String    @id @default(uuid())
-  name        String    @unique
-  description String
-  created_at  DateTime  @default(now())
-  products    Product[]
+  id              String            @id @default(uuid())
+  name            String
+  created_at      DateTime          @default(now())
+  ProductCategory ProductCategory[]
 
   @@map("_categories")
 }
 
 //* Products Model *//
 model Product {
-  id         String   @id @default(uuid())
-  name       String
-  bar_code   String   @unique
-  price      Decimal
-  created_at DateTime @default(now())
-  category   Category @relation(fields: [categoryId], references: [id])
-  categoryId String
+  id              String            @id @default(uuid())
+  name            String
+  bar_code        String            @unique
+  price           Decimal
+  created_at      DateTime          @default(now())
+  ProductCategory ProductCategory[]
 
   @@map("_products")
+}
+
+//* Products and Categories Model *//
+model ProductCategory {
+  id          String   @id @default(uuid())
+  id_product  String
+  product     Product  @relation(fields: [id_product], references: [id])
+  id_category String
+  category    Category @relation(fields: [id_category], references: [id])
+
+  @@map("products_categories")
 }

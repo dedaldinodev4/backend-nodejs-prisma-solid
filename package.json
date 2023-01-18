@@ -5,10 +5,11 @@
   "author": "Dedaldino Zukk",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only --watch-ignore ./node_modules src/index.ts",
+    "dev": "ts-node-dev --transpile-only --respawn --ignore-watch node_modules src/index.ts",
     "test": "jest"
   },
   "dependencies": {
+    "@prisma/client": "^4.8.1",
     "express": "^4.18.2"
   },
   "devDependencies": {
