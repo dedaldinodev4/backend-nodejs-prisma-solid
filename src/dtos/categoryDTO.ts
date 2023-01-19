@@ -6,5 +6,6 @@ export interface ICategory {
 }
 
 export interface ICategoryRequest {
+  id?: string;
   name: string;
 }

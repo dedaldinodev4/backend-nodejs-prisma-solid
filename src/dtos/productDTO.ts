@@ -10,7 +10,15 @@ export interface IProduct {
 }
 
 export interface IProductRequest {
+  id_category?: string;
   name: string;
   price: Decimal;
   bar_code: string;
 }
+
+export interface IProductUpdateRequest {
+  name: string;
+  price: Decimal;
+  bar_code: string;
+}
+
