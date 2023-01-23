@@ -20,6 +20,11 @@ export class PrismaCategoryRepository implements ICategoryRepository {
         });
         return category;
     }
+
+    async findAll(): Promise<ICategory[]> {
+      const categories = await this.repository.category.findMany({});
+      return categories;
+    }
         
     async create(category: ICategoryRequest): Promise<ICategory> {
       const newCategory = await this.repository.category.create({
