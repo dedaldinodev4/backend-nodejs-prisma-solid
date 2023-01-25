@@ -1,6 +1,6 @@
 import { 
   PrismaProductCategoryRepository 
-} from '../../../repositories/implementations/PrismaProductCategoryRepository'
+} from '../../../repositories/implementations/prisma/PrismaProductCategoryRepository'
 import { CreateProductCategoryController } from './CreateProductCategoryController'
 import { CreateProductCategoryUseCase } from './CreateProductCategoryUseCase'
 

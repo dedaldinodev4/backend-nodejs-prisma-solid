@@ -10,13 +10,12 @@ export class UpdateProductUseCase {
     ){}
 
     async execute(id: string, data: IUpdateProductRequest): Promise<IProduct | Error> {
-        const productExists = await this.productRepository.findById(id);
+      const productExists = await this.productRepository.findById(id);
+      if (!productExists) {
+        throw new Error('Product does not exists.')
+      }
 
-        if (!productExists) {
-          throw new Error('Product does not exists.')
-        }
-
-        const result = await this.productRepository.update(id, data);
-        return result;
+      const result = await this.productRepository.update(id, data);
+      return result;
     }
 }

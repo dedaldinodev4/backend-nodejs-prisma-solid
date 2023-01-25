@@ -1,7 +1,7 @@
-import { prismaClient } from "../../database/prismaClient";
-import { IProduct, IProductRequest, IProductUpdateRequest } from "../../dtos/productDTO";
-import { IProductCategory } from "../../dtos/productCategoryDTO";
-import { IProductRepository } from "../IProductRepository";
+import { prismaClient } from "../../../database/prismaClient";
+import { IProductCategory } from "../../../dtos/productCategoryDTO";
+import { IProduct, IProductRequest, IProductUpdateRequest } from "../../../dtos/productDTO";
+import { IProductRepository } from "../../IProductRepository";
 
 
 export class PrismaProductRepository implements IProductRepository {
@@ -34,10 +34,11 @@ export class PrismaProductRepository implements IProductRepository {
       const newProduct = await this.repository.product.create({
         data: product
       })
+
       return newProduct;
     }
         
-    async createWithCategory(data: IProductRequest): Promise<IProductCategory> {
+    async createWithCategory(data: IProductRequest): Promise<IProductCategory | Error> {
       const newProduct = await this.repository.productCategory.create({
         data: {
           product: {
@@ -54,7 +55,8 @@ export class PrismaProductRepository implements IProductRepository {
           }
         }
       })
-      return newProduct;
+
+      return newProduct
     }
 
     async update(id: string, product: IProductUpdateRequest): Promise<IProduct> {
@@ -64,17 +66,16 @@ export class PrismaProductRepository implements IProductRepository {
             id
           }
         })
+
         return productUpdate;
     }
 
-    async delete(id: string): Promise<IProduct> {
-        const productDelete = await this.repository.product.delete({
-          where: {
-            id
-          }
-        })
-
-        return productDelete;
+    async delete(id: string): Promise<void> {
+      const productDelete = await this.repository.product.delete({
+        where: {
+          id
+        }
+      })
     }
 
 }

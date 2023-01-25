@@ -1,6 +1,6 @@
-import { prismaClient } from "../../database/prismaClient";
-import { IProductCategory, IProductCategoryRequest } from "../../dtos/productCategoryDTO";
-import { IProductCategoryRepository } from "../IProductCategoryRepository";
+import { prismaClient } from "../../../database/prismaClient";
+import { IProductCategory, IProductCategoryRequest } from "../../../dtos/productCategoryDTO";
+import { IProductCategoryRepository } from "../../IProductCategoryRepository";
 
 
 export class PrismaProductCategoryRepository implements IProductCategoryRepository {

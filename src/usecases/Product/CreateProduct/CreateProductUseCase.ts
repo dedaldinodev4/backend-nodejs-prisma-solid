@@ -10,13 +10,17 @@ export class CreateProductUseCase {
     ){}
 
     async execute(data: ICreateProductRequest): Promise<IProduct | Error> {
-        const productExists = await this.productRepository.findByName(data.name);
 
-        if (productExists) {
+        const product = await this.productRepository.findByName(data.name);
+
+        if (!data.name) {
+          throw new Error('Name is required.')
+        }
+        if (product) {
           throw new Error('Product already exists.')
         }
-        const result = await this.productRepository.create(data);
 
+        const result = await this.productRepository.create(data);
         return result;
     }
 }

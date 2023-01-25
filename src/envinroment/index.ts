@@ -1,6 +1,5 @@
-import dotenv from 'dotenv'
+import "dotenv/config"
 
-dotenv.config();
 const { __APP_PORT, __BASE_URL } = process.env;
 
 export {

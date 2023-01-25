@@ -9,14 +9,13 @@ export class DeleteCategoryUseCase {
         private categoryRepository: ICategoryRepository
     ){}
 
-    async execute(id: string): Promise<ICategory | null> {
+    async execute(id: string): Promise<void | null> {
       const product = await this.categoryRepository.findById(id);
 
       if (!product) {
         throw new Error("Category doesn't exists.")
       }
       
-      const result = await this.categoryRepository.delete(id);
-      return result;
+      await this.categoryRepository.delete(id);
     }
 }

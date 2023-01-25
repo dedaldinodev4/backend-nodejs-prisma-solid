@@ -1,6 +1,6 @@
 import { 
   PrismaCategoryRepository 
-} from '../../../repositories/implementations/PrismaCategoryRepository'
+} from '../../../repositories/implementations/prisma/PrismaCategoryRepository'
 import { DeleteCategoryController } from './DeleteCategoryController'
 import { DeleteCategoryUseCase } from './DeleteCategoryUseCase'
 

@@ -1,6 +1,6 @@
 import { 
   PrismaProductRepository 
-} from '../../../repositories/implementations/PrismaProductRepository'
+} from '../../../repositories/implementations/prisma/PrismaProductRepository'
 import { UpdateProductController } from './UpdateProductController'
 import { UpdateProductUseCase } from './UpdateProductUseCase'
 

@@ -1,6 +1,6 @@
 import { 
   PrismaProductRepository 
-} from '../../../repositories/implementations/PrismaProductRepository'
+} from '../../../repositories/implementations/prisma/PrismaProductRepository'
 import { DeleteProductController } from './DeleteProductController'
 import { DeleteProductUseCase } from './DeleteProductUseCase'
 

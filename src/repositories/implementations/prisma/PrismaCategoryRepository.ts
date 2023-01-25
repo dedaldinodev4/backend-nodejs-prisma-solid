@@ -1,6 +1,6 @@
-import { prismaClient } from "../../database/prismaClient";
-import { ICategory, ICategoryRequest } from "../../dtos/categoryDTO";
-import { ICategoryRepository } from "../ICategoryRepository";
+import { prismaClient } from "../../../database/prismaClient";
+import { ICategory, ICategoryRequest } from "../../../dtos/categoryDTO";
+import { ICategoryRepository } from "../../ICategoryRepository";
 
 
 export class PrismaCategoryRepository implements ICategoryRepository {
@@ -44,14 +44,12 @@ export class PrismaCategoryRepository implements ICategoryRepository {
         return categoryUpdate;
     }
 
-    async delete(id: string): Promise<ICategory> {
+    async delete(id: string): Promise<void> {
         const categoryDelete = await this.repository.category.delete({
           where: {
             id
           }
         })
-
-        return categoryDelete;
     }
 
 }

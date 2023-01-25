@@ -1,6 +1,6 @@
 import { 
   PrismaCategoryRepository 
-} from '../../../repositories/implementations/PrismaCategoryRepository'
+} from '../../../repositories/implementations/prisma/PrismaCategoryRepository'
 import { FindOneCategoryController } from './FindOneCategoryController'
 import { FindOneCategoryUseCase } from './FindOneCategoryUseCase'
 
