@@ -40,7 +40,7 @@ There are some expected benefits of test automation like:
 
 
 ### Credits
- [Rocketseat](https://rocketseat.com.br/)
- [SOLID+TESTES](https://www.youtube.com/watch?v=jBOLRzjEERk&t=28s)
- [NODEJS+JEST+SUPERTEST](https://www.youtube.com/watch?v=18Dgf7lb9QA)
- [E2E+PRISMA+NODEJS](https://www.youtube.com/watch?v=w_el04y0cHo)
+ * [Rocketseat](https://rocketseat.com.br/)
+ * [SOLID+TESTES](https://www.youtube.com/watch?v=jBOLRzjEERk&t=28s)
+ * [NODEJS+JEST+SUPERTEST](https://www.youtube.com/watch?v=18Dgf7lb9QA)
+ * [E2E+PRISMA+NODEJS](https://www.youtube.com/watch?v=w_el04y0cHo)
