@@ -1,6 +1,5 @@
 import { Request, Response } from 'express'
 import { UpdateProductUseCase } from './UpdateProductUseCase'
-import { IProduct } from '../../../dtos/productDTO'
 
 
 export class UpdateProductController {
@@ -17,7 +16,7 @@ export class UpdateProductController {
                 name, price, bar_code
             });
 
-            return response.status(201).end();
+            return response.status(201).json(data);
         } catch(err: any) {
             return response.status(400).json({
                 message: err.message || 'Unexpected error.'

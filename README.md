@@ -1,5 +1,13 @@
 # Backend with Nodejs + Prisma + Typescript + S.O.L.I.D + TDD
 
+## Stacks
+* Nodejs
+* Express
+* Prisma
+* Typescript
+* Zod
+* SOLID Principles
+* Testing With Jest + Supertest
 
 Software testing is a way to assess application 
 quality and reduce the risk of failure in operation.
@@ -39,8 +47,24 @@ There are some expected benefits of test automation like:
 ![ScreenShot 03](/screens/3.png)
 
 
+### Socials
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/dedaldino-daniel04/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://dev.to/dedaldinodev4">
+    <img src="https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white" />
+  </a>
+  <a href="https://twitter.com/dedaldinodev4">
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
+  </a>
+</p>
+
 ### Credits
- * [Rocketseat](https://rocketseat.com.br/)
- * [SOLID+TESTES](https://www.youtube.com/watch?v=jBOLRzjEERk&t=28s)
- * [NODEJS+JEST+SUPERTEST](https://www.youtube.com/watch?v=18Dgf7lb9QA)
- * [E2E+PRISMA+NODEJS](https://www.youtube.com/watch?v=w_el04y0cHo)
+ * [Prisma](https://www.prisma.io/)
+ * [Design Patterns](https://refactoring.guru/design-patterns)
+ * [Zod](https://zod.dev)
+ * [REST API Validation Using Zod](https://jeffsegovia.dev/blogs/rest-api-validation-using-zod)
+ * [Jest](https://jestjs.io/)
+ * [Supertest](https://github.com/visionmedia/supertest)

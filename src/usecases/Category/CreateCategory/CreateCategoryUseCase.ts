@@ -12,6 +12,10 @@ export class CreateCategoryUseCase {
     async execute(data: ICreateCategoryRequest): Promise<ICategory | Error> {
         const categoryExists = await this.categoryRepository.findByName(data.name);
 
+        if (!data.name) {
+            throw new Error('Name is required.')  
+        }
+
         if (categoryExists) {
           throw new Error('Category already exists.')
         }

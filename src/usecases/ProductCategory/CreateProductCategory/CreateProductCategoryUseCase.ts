@@ -11,6 +11,9 @@ export class CreateProductCategoryUseCase {
 
     async execute(data:  ICreateProductCategoryRequest): Promise<IProductCategory | Error> {
 
+      if (!data.id_product || !data.id_category) {
+        throw new Error('id_product and id_category are required.')
+      }
       const result = await this.productCategoryRepository.create(data);
       return result;
     }

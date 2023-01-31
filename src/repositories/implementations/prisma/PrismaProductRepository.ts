@@ -14,7 +14,7 @@ export class PrismaProductRepository implements IProductRepository {
             ProductCategory: true
           }
         });
-        return product;
+        return product ?? null;
     }
 
     async findAll(): Promise<IProduct[]> {
@@ -26,7 +26,7 @@ export class PrismaProductRepository implements IProductRepository {
         const product = await this.repository.product.findFirst(
           { where: { name }
         });
-        return product;
+        return product ?? null;
     }
         
         
